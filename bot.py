@@ -7,6 +7,7 @@ bot = commands.Bot(command_prefix='>', intents=intents)
 # ------------------------------------------------------- # Configuration
 Logging = True # True or False
 token = 'input bot token'
+settings = json.load(open("settings.json", encoding="utf-8"))
 def staff(ctx):
     return str(ctx.author.id) in settings["staffId"]
 # ------------------------------------------------------- # Commands
